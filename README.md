@@ -1,2 +1,2 @@
 # Hada
-It is only the front page. In this website I used BEM methodology.
+It is only the front page. I here used BEM methodology.
