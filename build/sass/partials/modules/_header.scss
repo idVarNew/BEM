@@ -1,0 +1,45 @@
+.c-header {
+    padding: 28px 0;
+    @include media(m) {
+        padding: 58px 0 55px;
+    }
+    display: block;
+    width: 100%;
+
+    &_center {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 3rem;
+        line-height: 1.2;
+        font-family: $fontFamily3;
+        text-transform: uppercase;
+        @include media(xs) {
+            line-height: inherit;
+        }
+        @include media(m) {
+            letter-spacing: 4px;
+        }
+    }
+
+    &__subtitle {
+        color: $color4;
+        font-style: italic;
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+        font-family: $fontFamily1;
+        @include media(s) {
+            letter-spacing: 4px;
+        }
+    }
+
+    &_narrow {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &_margin {
+        padding: 70px 0 20px;
+    }
+}

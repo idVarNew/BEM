@@ -1,0 +1,6 @@
+footer {
+    text-align: center;
+    @include media(xs) {
+        text-align: left;
+    }
+}

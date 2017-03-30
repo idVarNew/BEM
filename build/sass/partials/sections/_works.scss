@@ -1,0 +1,111 @@
+.c-works {
+    max-width: 1200px;
+    margin: 0 auto;
+    @include media(m) {
+        padding-bottom: 200px;
+    }
+    @include media(k) {
+        padding-bottom: 250px;
+    }
+
+    &__random-images {
+        @include media(s) {
+            flex-basis: 47%;
+            width: 47%;
+            position: relative;
+            height: auto;
+        }
+    }
+
+    &__wrapper {
+        @include media(s) {
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    &__text-content {
+        margin-top: 20px;
+        @include media(s) {
+            padding-left: 5%;
+            width: 53%;
+            align-content: center;
+            text-align: right;
+        }
+        @include media(m) {
+            padding-left: 20%;
+        }
+    }
+
+    &__text {
+        text-align: left;
+    }
+
+    &__image-bottom {
+        @include media(m) {
+            position: absolute;
+            right: -5%;
+            top: 50%;
+            width: 280px;
+            height: 280px;
+            background-image: url("../img/bestworks/works2.jpg");
+            -webkit-animation-name: animateWorks;
+            -moz-animation-name: animateWorks;
+            animation-name: animateWorks;
+            -webkit-animation-duration: 8s;
+            -moz-animation-duration: 8s;
+            animation-duration: 8s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    &__content-header {
+        font-size: 20px;
+        text-align: left;
+        @include media(m) {
+            text-transform: uppercase;
+            transform: rotate(-90deg) translate(-270px,-275px);
+            text-align: right;
+            margin: initial;
+        }
+    }
+
+    &__content-title {
+        font-size: 3rem;
+        text-transform: uppercase;
+        @include media(m) {
+            font-size: 4.5rem;
+            letter-spacing: 4px;
+        }
+    }
+
+    &__content-subtitle {
+        color: $color4;
+        font-style: italic;
+        letter-spacing: 2px;
+        font-size: 1.4rem;
+        font-family: $fontFamily1;
+    }
+}
+@keyframes animateWorks {
+    0% {
+        background-image: url("../img/bestworks/works0.jpg");
+        background-position: center;
+    }
+
+    50% {
+        background-image: url("../img/bestworks/works1.jpg");
+        background-position: top;
+    }
+
+    80% {
+        background-image: url("../img/bestworks/works2.jpg");
+        background-position: top;
+    }
+
+    100% {
+        background-image: url("../img/bestworks/works0.jpg");
+        background-position: center;
+    }
+}

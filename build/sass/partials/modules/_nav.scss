@@ -1,0 +1,166 @@
+.c-nav {
+    @include media(m) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        margin: 0 15px;
+        display: none;
+        @include media(xs) {
+            margin: 0 35px;
+        }
+        @include media(s) {
+            max-height: none;
+        }
+        @include media(m) {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            flex-direction: row;
+            display: block;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 15px 0;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        @include media(m) {
+            font-size: 1.2rem;
+            display: inline;
+            padding: 0 0.7em;
+        }
+
+        &_is-active {
+            border-bottom: 2px solid $color1;
+            padding-bottom: 8px;
+        }
+    }
+
+    &__list_show-hide {
+        display: block;
+    }
+
+    &__item {
+        border-bottom: 1px solid $color3;
+        @include media(m) {
+            padding-right: 40px;
+            border-bottom: 0 solid $color3;
+            padding: 0;
+        }
+    }
+
+    &__button {
+        //  width: 35px;
+        height: 20px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        right: 19px;
+        top: 35px;
+        @include media(m) {
+            display: none;
+        }
+        @include media(xs) {
+            right: 35px;
+        }
+        border: none;
+        background: transparent;
+        padding: 0;
+    }
+
+    &__line {
+        display: block;
+        margin-bottom: 5px;
+        height: 2px;
+        width: 25px;
+        background: $color1;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.25s ease-in-out;
+        -moz-transition: 0.25s ease-in-out;
+        -o-transition: 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
+
+        &_1,
+        &_2 {
+            top: 8px;
+        }
+
+        &_3 {
+            top: 16px;
+        }
+    }
+
+    &_not-active {
+        @include media(m) {
+            display: flex;
+        }
+    }
+}
+
+.c-in-touch {
+    display: none;
+    @include media(m) {
+        display: block;
+    }
+
+    &__content {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        margin: 0;
+        display: flex;
+    }
+
+    &__text {
+        align-items: center;
+        padding-right: 10px;
+        margin-top: 2px;
+        white-space: nowrap;
+        display: flex;
+    }
+}
+
+.c-nav__line_1.is-open {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    height: 3px;
+    width: 27px;
+}
+
+.c-nav__line_2.is-open {
+    opacity: 0;
+}
+
+.c-nav__line_3.is-open {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 9px;
+    height: 3px;
+    width: 27px;
+}

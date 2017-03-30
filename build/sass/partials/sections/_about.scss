@@ -1,0 +1,113 @@
+.c-about {
+    @include media(m) {
+        padding: 10% 15%;
+    }
+    @include media(xl) {
+        padding: 2%;
+        max-width: 520px;
+        width: 85%;
+    }
+    @include media(l) {
+        margin-top: 25px;
+        width: 80%;
+    }
+
+    &__title {
+        line-height: normal;
+        @include media(xs) {
+            line-height: inherit;
+        }
+        font-size: 3.2rem;
+        letter-spacing: 1px;
+        font-family: Montserrat, sans-serif;
+        text-transform: uppercase;
+    }
+
+    &__h3 {
+        @include media(l) {
+            font-size: 2.8rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .c-header {
+        padding-left: 25px;
+        @include media(l) {
+            padding-left: 0;
+        }
+    }
+
+    &__header {
+        margin: 0 0 20px;
+        border-bottom: 1px solid $color3;
+
+        &_left {
+            @include media(l) {
+                border-bottom: 1px solid #f8f8f8;
+                transform: rotate(-90deg) translate(-110px, -170px);
+                text-align: right;
+                margin: 0;
+                position: absolute;
+            }
+        }
+
+        &_right {
+            margin-top: 40px;
+            @include media(l) {
+                border-bottom: 1px solid #f8f8f8;
+                transform: rotate(-90deg) translate(-80px, -145px);
+                text-align: right;
+                margin: 0;
+                position: absolute;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__subtitle {
+        color: $color4;
+        font-style: italic;
+        padding-bottom: 10px;
+        display: block;
+        font-family: $fontFamily1;
+        @include media(m) {
+            line-height: normal;
+        }
+    }
+
+    &__text {
+        color: $color5;
+        @include media(m) {
+            line-height: 1.8;
+        }
+        @include media(l) {
+            font-size: 1.5rem;
+            color: $color4;
+        }
+    }
+    @include media(xl) {
+        &_line {
+            &-right {
+                &::before {
+                    content: "";
+                    width: 180px;
+                    height: 5px;
+                    display: block;
+                    background-color: $color1;
+                    position: absolute;
+                    transform: translate(580px, 75px);
+                    z-index: 10;
+                }
+            }
+        }
+    }
+    @include media(l) {
+        &__section {
+            padding: 0 20px 28px 28px;
+        }
+
+        &__section_right {
+            padding: 0 28px 28px 20px;
+        }
+    }
+}

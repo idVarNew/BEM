@@ -1,0 +1,37 @@
+@mixin media($media) {
+     @if $media == xs{
+        @media only screen and (min-width: $break-xsmall) {
+             @content;
+        }
+    }
+    @else if $media == s {
+         @media only screen and (min-width: $break-small){
+            @content;
+        }
+    }
+    @else if $media == m {
+         @media only screen and (min-width: $break-medium){
+            @content;
+        }
+    }
+    @else if $media == l {
+         @media only screen and (min-width: $break-large){
+            @content;
+        }
+    }
+    @else if $media == xl {
+         @media only screen and (min-width: $break-xlarge){
+            @content;
+        }
+    }
+    @else if $media == xxl {
+         @media only screen and (min-width: $break-xxlarge){
+            @content;
+        }
+    }
+    @else if $media == xsal {
+         @media (min-width: $break-xsmall) and (max-width: $break-large){
+            @content;
+        }
+    }
+}

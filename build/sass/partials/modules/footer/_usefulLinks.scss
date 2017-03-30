@@ -1,0 +1,30 @@
+.c-useful-links {
+    &__title {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline;
+        border-bottom: 1px solid $color1;
+        padding-bottom: 5px;
+    }
+
+    &__list {
+        margin-top: 20px;
+    }
+
+    &__item {
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        @include media(xs) {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__link {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

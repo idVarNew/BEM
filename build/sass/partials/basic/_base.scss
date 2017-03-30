@@ -1,0 +1,83 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+.kotek-12 {
+    transition: 1s;
+    color: #000;
+}
+
+body {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    @include media(m) {
+        line-height: 1.4;
+    }
+    height: 100%;
+    color: $color5;
+    font-family: $fontFamily2, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        list-style: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+::-moz-selection {
+    background: #FFBF00;
+    text-shadow: none;
+}
+
+::selection {
+    background: #FFBF00;
+    text-shadow: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color5;
+
+    &:hover {
+        color: #555;
+    }
+
+    &:active {
+        color: $color3;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.c-visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

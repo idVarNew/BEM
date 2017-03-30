@@ -1,0 +1,39 @@
+.c-logos {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin: 70px auto;
+    @include media(xs) {
+        margin: 70px auto 80px;
+        justify-content: space-between;
+    }
+    @include media(s) {
+        flex-wrap: nowrap;
+    }
+    @include media(l) {
+        margin: 70px auto 120px;
+    }
+
+    &__item {
+        //  width: 33%;
+        // display: inline-block;
+        //  max-width: 33%;
+        //  flex: 1 0 33%;
+        //  flex-basis: 33%;
+        width: 33%;
+        //
+        @include media(xs) {
+            display: block;
+            flex: 1 0 inherit;
+            width: inherit;
+        }
+        text-align: center;
+    }
+
+    &__image {
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

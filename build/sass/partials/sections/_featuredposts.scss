@@ -1,0 +1,88 @@
+.c-featured-post {
+    flex-basis: 100%;
+    padding: 38px 20px;
+    background-color: $color2;
+    border: 1px solid $color3;
+    transition: all 0.5s;
+    @include media(s) {
+        flex-basis: 90%;
+        width: 90%;
+        padding: 10px;
+        border: none;
+    }
+    @include media(m) {
+        flex-basis: 70%;
+        width: 70%;
+        padding: 25px 10px;
+    }
+
+    &__title {
+        font-family: $fontFamily3;
+        font-weight: 500;
+        font-size: 1.8rem;
+        display: inline-block;
+        @include media(xs) {
+            font-size: 1.9rem;
+        }
+        @include media(s) {
+            font-size: 1.4rem;
+        }
+        @include media(l) {
+            font-size: 1.8rem;
+        }
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 2px solid $color1;
+        padding-bottom: 8px;
+    }
+
+    &__info {
+        color: $color4;
+        font-style: italic;
+        letter-spacing: 2px;
+        padding: 0;
+        @include media(s) {
+            letter-spacing: 1px;
+        }
+        @include media(m) {
+            padding: 5px 0 0;
+            letter-spacing: 2px;
+        }
+        font-family: $fontFamily1;
+        font-size: 1.2rem;
+        display: block;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        line-height: 1.7;
+        @include media(xs) {
+            font-size: 1.8rem;
+            line-height: 1.5;
+        }
+        @include media(s) {
+            font-size: 1.4rem;
+        }
+        @include media(m) {
+            line-height: 1.8;
+            padding: 0 10px 8px;
+        }
+        @include media(l) {
+            padding: 0 10px 8px;
+        }
+    }
+
+    &:hover {
+        background-color: $color5;
+        color: $color2;
+        transition: all 0.5s;
+
+        .c-featured-post__title {
+            border-bottom: 2px solid $color2;
+        }
+
+        .c-featured-post__info {
+            color: $color2;
+        }
+    }
+}

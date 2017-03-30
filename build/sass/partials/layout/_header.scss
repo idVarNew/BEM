@@ -1,0 +1,47 @@
+.l-main-header {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+    @include media(m) {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1900px;
+        padding: 15px 10px;
+        flex-basis: 100%;
+        position: fixed;
+        z-index: 800;
+        background-color: $color2;
+        left: 0;
+        right: 0;
+    }
+
+    &__nav {
+        flex-direction: column;
+        width: 100%;
+        @include media(m) {
+            width: auto;
+            flex-direction: row;
+            flex: 4;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    &__brand {
+        padding-left: 15px;
+        //  line-height: 1.5;
+        float: none;
+        @include media(xs) {
+            flex-basis: initial;
+            padding-left: 35px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+}

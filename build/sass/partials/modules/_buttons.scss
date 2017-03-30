@@ -1,0 +1,8 @@
+[type=button] {
+    background-color: $color2;
+    cursor: pointer;
+}
+
+html [type="button"] {
+    -webkit-appearance: initial;
+}

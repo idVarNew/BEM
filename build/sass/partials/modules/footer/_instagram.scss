@@ -1,0 +1,34 @@
+.c-instagram {
+    &__title {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline;
+        border-bottom: 1px solid $color1;
+        padding-bottom: 5px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    &__link {
+        width: 48%;
+        display: inline-block;
+        opacity: 1;
+        transition: all 0.5s;
+
+        &:hover {
+            opacity: 0.8;
+            transition: all 0.5s;
+        }
+    }
+
+    &__photo {
+        margin-bottom: 15px;
+    }
+}

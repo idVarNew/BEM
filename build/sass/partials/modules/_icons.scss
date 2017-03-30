@@ -1,0 +1,124 @@
+.c-icons {
+    display: flex;
+    justify-content: space-between;
+
+    &_margin {
+        margin: 0 25px;
+        @include media(s) {
+            margin: 0;
+        }
+    }
+
+    &__link {
+        span {
+            display: block;
+        }
+    }
+
+    &_nav {
+        padding: 8px 0 0 5px;
+        margin: 0;
+        @include media(xs) {
+            margin: 15px 0;
+            padding: 0 35px;
+        }
+        @include media(m) {
+            padding: 0;
+        }
+    }
+}
+
+.c-icon {
+    opacity: 1;
+    display: block;
+    font-size: 1.4em;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    background: url("../img/icons.svg") no-repeat;
+    -webkit-background-size: 1em 9em;
+    background-size: 1em 9em;
+    flex: 1;
+
+    &_emial {
+        background-position: 0 0;
+    }
+
+    &_github {
+        background-position: 0 -1em;
+    }
+
+    &_behance {
+        background-position: 0 -2em;
+    }
+
+    &_pinterest {
+        background-position: 0 -3em;
+    }
+
+    &_twitter {
+        background-position: 0 -4em;
+    }
+
+    &_linkedIn {
+        background-position: 0 -5em;
+    }
+
+    &_facebook {
+        background-position: 0 -6em;
+    }
+
+    &_zoom {
+        background-position: 0 -7em;
+
+        &_gallery {
+            font-size: 5em;
+            height: 0.4em;
+            margin-top: 2px;
+            display: none;
+            margin: 0 auto;
+            @include media(m) {
+                display: block;
+            }
+        }
+    }
+
+    &_arrow-bottom {
+        background-position: 0 -8em;
+    }
+
+    &_larger {
+        font-size: 2.4em;
+        align-items: flex-start;
+        margin-top: -1px;
+    }
+
+    &_has-margin {
+        margin: 0 10px;
+    }
+
+    &_in-footer {
+        font-size: 2em;
+        margin: 25px 0 0;
+        @include media(xs) {
+            opacity: 0.5;
+            font-size: 2em;
+            margin: 10px 12px 0 0;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &_margin {
+        margin: 0 17%;
+        @include media(xs) {
+            margin: 0;
+        }
+    }
+}

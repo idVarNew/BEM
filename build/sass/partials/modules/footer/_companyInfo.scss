@@ -1,0 +1,44 @@
+.c-company-info {
+    font-size: 1.4rem;
+    @include media(s) {
+        font-size: 1.1rem;
+    }
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &__name {
+        margin: 0;
+    }
+
+    &__adr {
+        color: #1b1a1a;
+        padding-bottom: 30px;
+        font-weight: 500;
+    }
+
+    &__tel {
+        color: #222;
+        font-size: 1.2rem;
+        @include media(xs) {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: #888;
+        }
+    }
+
+    &__url {
+        font-size: 25px;
+        font-family: Montserrat;
+        font-weight: 800;
+    }
+
+    &__e-mail {
+        color: #222;
+        font-size: 1.2rem;
+        @include media(xs) {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: #888;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.c-brand {
+    &__name {
+        text-transform: uppercase;
+        font-family: Montserrat;
+        line-height: 0;
+        margin: 30px 0;
+        @include media(s) {
+            line-height: inherit;
+            margin: 10px 0 0;
+        }
+
+        &::after {
+            @include media(l) {
+                content: "";
+                width: 170px;
+                height: 2px;
+                display: block;
+                background-color: $color1;
+                transform: translateX(-80px);
+            }
+        }
+    }
+}

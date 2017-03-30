@@ -1,0 +1,57 @@
+.c-pricing {
+    background-color: #f1f1f1;
+    padding: 8px 20px;
+    transition: all 0.2s;
+    @include media(s) {
+        padding: 28px;
+    }
+
+    &:hover {
+        background-color: $color3;
+        transition: all 0.2s;
+
+        .c-pricing__aside {
+            transition: all 0.5s;
+            background-color: $color4;
+            color: $color2;
+        }
+    }
+
+    &__header {
+        padding-bottom: 15px;
+        @include media(xs) {
+            padding-bottom: 5px;
+        }
+    }
+
+    &__plan-title {
+        font-size: 2rem;
+        @include media(s) {
+            font-size: 1.2rem;
+        }
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    &__aside {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+        padding: 0 10px;
+        background-color: $color2;
+    }
+
+    &__price {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    &__feature {
+        padding: 2px 0;
+        @include media(xs) {
+            padding: 5px 0;
+        }
+        @include media(m) {
+            padding: 15px 0 10px;
+        }
+    }
+}
